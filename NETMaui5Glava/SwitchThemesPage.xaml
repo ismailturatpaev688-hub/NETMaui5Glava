@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NETMaui5Glava.SwitchThemesPage"
+             Title="SwitchThemesPage"
+             Background="{AppThemeBinding Dark={StaticResource BackgroundForDark}, Light={StaticResource BackgroundForLight}}">
+
+    <!-- Реакция на изменение системной темы устройства (AppThemeBinding), темная и светлая тема -->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="TextForLight">Black</Color>
+            <Color x:Key="TextForDark">White</Color>
+            <Color x:Key="BackgroundForLight">LightGreen</Color>
+            <Color x:Key="BackgroundForDark">DarkBlue</Color>
+            <Style TargetType="Label" x:Key="light">
+                <Setter Property="TextColor" Value="DarkBlue"></Setter>
+            </Style>
+            <Style TargetType="Label" x:Key="dark">
+                <Setter Property="TextColor" Value="LightBlue"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30, 0" Spacing="25">
+            <Label Text="Hello, World!" TextColor="{AppThemeBinding Dark={StaticResource dark}, Light={StaticResource light}}" SemanticProperties.HeadingLevel="Level1"></Label>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

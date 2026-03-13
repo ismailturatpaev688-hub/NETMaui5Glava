@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NETMaui5Glava.ResoursesPage"
+             Title="ResoursesPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array Type = "{x:Type x:String}" x:Key="pickerElements">
+                <x:String>Элемент 1</x:String>
+                <x:String>Элемент 2</x:String>
+                <x:String>Элемент 3</x:String>
+                <x:String>Элемент 4</x:String>
+            </x:Array>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout Padding = "30, 0" Spacing="25">
+            <Picker ItemsSource = "{DynamicResource pickerElements}" SelectedIndexChanged="Picker_SelectedIndexChanged"></Picker>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

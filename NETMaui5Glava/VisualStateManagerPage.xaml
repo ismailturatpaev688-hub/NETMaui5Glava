@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NETMaui5Glava.VisualStateManagerPage"
+             Title="VisualStateManagerPage">
+
+    
+    <!-- Глава 7. Привязка в NET MAUI. Основы привязки -->
+    
+    <!-- Режим привязки-->
+    <VerticalStackLayout>
+        <Slider x:Name="SourcesSlider"/>
+        <Slider x:Name="TargetSource" Value="{Binding Source={x:Reference SourcesSlider}, Path=Value, Mode=TwoWay}"></Slider>
+        <Label Text="{Binding Source={x:Reference SourcesSlider}, Path=Value}"/>
+    </VerticalStackLayout>
+    <!--
+    <ScrollView>
+        <VerticalStackLayout Padding="30, 0"
+                             Spacing="25">
+            <Slider Maximum="90" Minimum="-90" x:Name="Rotator"/>
+            
+            <Entry x:Name="textEdit"></Entry>
+         
+            <Label x:Name="textLabel"
+                   Rotation="{Binding Source={x:Reference Rotator}, Path=Value}"
+                   Text="{Binding Source={x:Reference textEdit}, Path=Text}"></Label>
+        </VerticalStackLayout>
+    </ScrollView>
+    -->
+    <!-- Глава 7. Привязка в NET MAUI. Основы привязки
+    <ScrollView>
+        <VerticalStackLayout Padding="30, 0"
+                             Spacing="25">
+            <Entry x:Name="textEdit">Привязка в XAML </Entry>
+             
+            <Label x:Name="textLabel"
+                   BindingContext="{Reference textEdit}"
+                   Text="{Binding Text}"></Label>
+        </VerticalStackLayout>
+    </ScrollView>
+    -->
+    <!-- Определение собственных состояний элемента 
+    <ScrollView>
+        <VerticalStackLayout Padding="30, 0"
+                             Spacing="25">
+            <Entry x:Name="NumberOnly" TextChanged="Entry_TextChanged">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+                        <VisualStateGroup Name="EntryStates">
+                            
+                            <VisualState Name="Valid">
+                                <VisualState.Setters>
+                                    <Setter Property="Background" Value="LightGreen"></Setter>
+                                    <Setter Property="TextColor" Value="DarkGreen"></Setter>
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState Name="Invalid">
+                                <VisualState.Setters>
+                                    <Setter Property="Background" Value="LightCoral"></Setter>
+                                    <Setter Property="TextColor" Value="DarkRed"></Setter>
+                                </VisualState.Setters>
+                            </VisualState>
+                            
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups>
+            </Entry>
+        </VerticalStackLayout>
+    </ScrollView>
+    -->
+    <!-- Определение визуальных состояний в стиле  
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup Name="CommonStates">
+                            <VisualState Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="Lime"></Setter>
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState Name="PointerOver">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="LightBlue"></Setter>
+                                    <Setter Property="BorderWidth" Value="3"></Setter>
+                                    <Setter Property="BorderColor" Value="DarkBlue"></Setter>
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="LightCoral"></Setter>
+                                </VisualState.Setters>
+
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30, 0" Spacing="25">
+            <Button Text="Click me" HorizontalOptions="Fill"></Button>
+        </VerticalStackLayout>
+    </ScrollView>
+    -->
+    
+    <!-- Определение визуальных состояний в элементе управления    
+    <ScrollView>
+        <VerticalStackLayout Padding="30, 0"
+                             Spacing="25">
+            <Button Text="Click me"
+                    SemanticProperties.Hint="Counts the number of times you click"
+                    HorizontalOptions="Fill">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+                        <VisualStateGroup Name="CommonStates">
+                            <VisualState Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="Lime"></Setter>
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState Name="PointerOver">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="LightBlue"></Setter>
+                                    <Setter Property="BorderWidth" Value="3"></Setter>
+                                    <Setter Property="BorderColor" Value="DarkBlue"></Setter>
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="LightCoral"></Setter>
+                                </VisualState.Setters>
+                                
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups>
+            </Button>
+        </VerticalStackLayout>
+    </ScrollView>
+    -->
+</ContentPage>

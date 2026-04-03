@@ -28,6 +28,9 @@
         <Tab Title="Theme" Icon="dotnet_bot.png" Route="SwitchThemesPage">
             <ShellContent ContentTemplate="{DataTemplate local:SwitchThemesPage}"/>
         </Tab>
+        <Tab Title="VisualStateManager" Icon="dotnet_bot.png">
+            <ShellContent ContentTemplate="{DataTemplate local:VisualStateManagerPage}"/>
+        </Tab>
     </TabBar>
 
     <!-- Бургер-меню + вложенные вкладки в всплывающем списке (верхняя меню навигации на телефоне)

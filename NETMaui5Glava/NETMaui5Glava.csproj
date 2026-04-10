@@ -71,6 +71,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="FormattingStrings.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Resources\ExampleRes\MyResources.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

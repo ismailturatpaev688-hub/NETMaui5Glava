@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NETMaui5Glava.FormattingStrings"
+             xmlns:converter="clr-namespace:NETMaui5Glava.Controls"
+             Title="FormattingStrings">
+    
+    <!-- Использование конвертеров значений XAML 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converter:RgbConverter x:Key="RgbConverter"/>
+            <converter:DoubleToHexConverter x:Key="DoubleToHexConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Background>
+        <MultiBinding Converter="{StaticResource RgbConverter}">
+            <MultiBinding.Bindings>
+                <Binding Path="Value" Source="{x:Reference RValue}"></Binding>
+                <Binding Path="Value" Source="{x:Reference GValue}"></Binding>
+                <Binding Path="Value" Source="{x:Reference BValue}"></Binding>
+            </MultiBinding.Bindings>
+        </MultiBinding>
+    </ContentPage.Background>
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="{Binding Source={x:Reference RValue}, Path=Value, StringFormat='Красный {0}', Converter={x:StaticResource DoubleToHexConverter}}"/>
+            <Slider x:Name="RValue" Maximum="255" Minimum="0"></Slider>
+
+            <Label Text="{Binding Source={x:Reference GValue}, Path=Value, StringFormat='Зеленый {0:F0}', Converter={x:StaticResource DoubleToHexConverter}}"/>
+            <Slider x:Name="GValue" Maximum="255" Minimum="0"></Slider>
+
+            <Label Text="{Binding Source={x:Reference BValue}, Path=Value, StringFormat='Синий {0:F0}', Converter={x:StaticResource DoubleToHexConverter}}"/>
+            <Slider x:Name="BValue" Maximum="255" Minimum="0"></Slider>
+        </VerticalStackLayout>
+    </ScrollView>
+    -->
+    <!-- Форматирование строк и конвертеры значений IValueConverer и IMultiValueConverter 
+    <ScrollView>
+        <VerticalStackLayout>
+            
+            <Label Text="{Binding Source={x:Reference RValue},
+                   Path=Value,
+                   StringFormat='Красный {0:F0}'}"/>
+
+            <Slider x:Name="RValue" Maximum="255" Minimum="0"/>
+
+            <Label Text="{Binding Source={x:Reference GValue},
+                   Path=Value,
+                   StringFormat='Зеленый {0:F0}'}"/>
+
+            <Slider x:Name="GValue" Maximum="255" Minimum="0"/>
+
+            <Label Text="{Binding Source={x:Reference BValue},
+                   Path=Value,
+                   StringFormat='Синий {0:F0}'}"/>
+
+            <Slider x:Name="BValue" Maximum="255" Minimum="0"/>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+    -->
+</ContentPage>

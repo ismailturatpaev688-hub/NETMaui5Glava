@@ -31,6 +31,9 @@
         <Tab Title="VisualStateManager" Icon="dotnet_bot.png">
             <ShellContent ContentTemplate="{DataTemplate local:VisualStateManagerPage}"/>
         </Tab>
+        <Tab Title="FormattingStrings" Icon="dotnet_bot.png">
+            <ShellContent ContentTemplate="{DataTemplate local:FormattingStrings}"/>
+        </Tab>
     </TabBar>
 
     <!-- Бургер-меню + вложенные вкладки в всплывающем списке (верхняя меню навигации на телефоне)

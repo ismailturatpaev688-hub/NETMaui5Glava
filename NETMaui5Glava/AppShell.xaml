@@ -34,6 +34,12 @@
         <Tab Title="FormattingStrings" Icon="dotnet_bot.png">
             <ShellContent ContentTemplate="{DataTemplate local:FormattingStrings}"/>
         </Tab>
+        <Tab Title="RelativeBinding" Icon="dotnet_bot.png">
+            <ShellContent ContentTemplate="{DataTemplate local:RelativeBinding}"/>
+        </Tab>
+        <Tab Title="BindingToArbitrary" Icon="dotnet_bot.png">
+            <ShellContent ContentTemplate="{DataTemplate local:BindingToArbitrary}"/>
+        </Tab>
     </TabBar>
 
     <!-- Бургер-меню + вложенные вкладки в всплывающем списке (верхняя меню навигации на телефоне)
